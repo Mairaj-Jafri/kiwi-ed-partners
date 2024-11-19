@@ -5,68 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Zealand Study Assessment Form</title>
     <style>
-        /* Add your existing styles here */
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
 
-        h1, h2 {
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
             color: #333;
         }
 
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
+        form label {
             font-weight: bold;
-            display: block;
             margin-top: 10px;
+            display: block;
         }
 
-        input, select, textarea {
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
+            margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 4px;
         }
 
-        .form-group {
-            margin-bottom: 15px;
+        textarea {
+            resize: vertical;
         }
 
-        .submit-button {
-            background-color: #2a5298;
+        .consent {
+            margin: 20px 0;
+        }
+
+        button {
+            background: #4CAF50;
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
+            padding: 15px 20px;
             cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
         }
 
-        .submit-button:hover {
-            background-color: #1e3c72;
+        button:hover {
+            background: #45a049;
         }
 
-        /* Package Styles (from your second code) */
+        /* Packages Section Styles */
         .packages-container {
             display: flex;
             justify-content: center;
             gap: 30px;
             padding: 20px;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .package-card {
@@ -83,8 +90,21 @@
             transform: translateY(-5px);
         }
 
+        .basic {
+            border-top: 5px solid #4CAF50;
+        }
+
+        .standard {
+            border-top: 5px solid #2196F3;
+        }
+
+        .premium {
+            border-top: 5px solid #9C27B0;
+        }
+
         .package-card h2 {
             color: #333;
+            margin-top: 0;
         }
 
         .price {
@@ -130,34 +150,42 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
+    <div class="container">
         <h1>New Zealand Study Assessment Form</h1>
-        <form id="assessmentForm">
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="country">Country of Residence</label>
-                <select id="country" name="country" required>
-                    <option value="">Select your country</option>
-                    <option value="New Zealand">New Zealand</option>
-                    <option value="Australia">Australia</option>
-                    <option value="India">India</option>
-                    <option value="USA">USA</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="education">Highest Education Level</label>
-                <textarea id="education" name="education" rows="4" required></textarea>
+        <form>
+            <!-- Personal Information -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <!-- Academic Information -->
+            <label for="education-level">Highest Level of Education</label>
+            <select id="education-level" name="education-level" required>
+                <option value="">Select your education level</option>
+                <option value="high-school">High School</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select>
+            
+            <label for="desired-program">Desired Program of Study</label>
+            <input type="text" id="desired-program" name="desired-program" placeholder="E.g., Computer Science, Business Administration" required>
+            
+            <label for="university-preference">Preferred Universities</label>
+            <textarea id="university-preference" name="university-preference" placeholder="List any preferred universities (if any)"></textarea>
+            
+            <!-- Consent -->
+            <div class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to the terms and conditions and the privacy policy.</label>
             </div>
 
             <!-- Packages Section -->
-            <h2>Choose a Package</h2>
             <div class="packages-container">
                 <div class="package-card basic">
                     <h2>Basic Package</h2>
@@ -166,50 +194,44 @@
                         <li>Initial Consultation (1 hour)</li>
                         <li>University Shortlisting (3 universities)</li>
                         <li>Basic Document Review</li>
+                        <li>Email Support</li>
                     </ul>
-                    <button type="button" class="select-button" onclick="selectPackage('Basic')">Select Basic</button>
+                    <button class="select-button" type="button" onclick="selectPackage('Basic')">Select Basic</button>
                 </div>
+
                 <div class="package-card standard">
                     <h2>Standard Package</h2>
                     <div class="price">$XXX</div>
                     <ul class="features">
-                        <li>Everything in Basic</li>
+                        <li>Everything in Basic, plus:</li>
                         <li>Extended Consultation (2 hours)</li>
-                        <li>Priority Support</li>
+                        <li>Scholarship Application Support</li>
+                        <li>Interview Preparation</li>
                     </ul>
-                    <button type="button" class="select-button" onclick="selectPackage('Standard')">Select Standard</button>
+                    <button class="select-button" type="button" onclick="selectPackage('Standard')">Select Standard</button>
                 </div>
+
                 <div class="package-card premium">
                     <h2>Premium Package</h2>
                     <div class="price">$XXX</div>
                     <ul class="features">
-                        <li>Everything in Standard</li>
                         <li>Unlimited Consultation</li>
-                        <li>Complete Visa Application Support</li>
+                        <li>Comprehensive Application Management</li>
+                        <li>Post-Admission Support</li>
                     </ul>
-                    <button type="button" class="select-button" onclick="selectPackage('Premium')">Select Premium</button>
+                    <button class="select-button" type="button" onclick="selectPackage('Premium')">Select Premium</button>
                 </div>
             </div>
 
-            <input type="hidden" id="selectedPackage" name="selectedPackage" required>
-            <button type="submit" class="submit-button">Submit</button>
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
         </form>
     </div>
 
     <script>
         function selectPackage(packageType) {
-            // Set the selected package value in the hidden input field
-            document.getElementById('selectedPackage').value = packageType;
-            alert(`${packageType} package selected.`);
+            alert(`You have selected the ${packageType} Package`);
         }
-
-        document.getElementById('assessmentForm').addEventListener('submit', function(event) {
-            const selectedPackage = document.getElementById('selectedPackage').value;
-            if (!selectedPackage) {
-                event.preventDefault();
-                alert('Please select a package before submitting.');
-            }
-        });
     </script>
 </body>
 </html>
