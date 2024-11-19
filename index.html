@@ -1,237 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Zealand Study Assessment Form</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        form label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        .consent {
-            margin: 20px 0;
-        }
-
-        button {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1em;
-            width: 100%;
-        }
-
-        button:hover {
-            background: #45a049;
-        }
-
-        /* Packages Section Styles */
-        .packages-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .package-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .package-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .basic {
-            border-top: 5px solid #4CAF50;
-        }
-
-        .standard {
-            border-top: 5px solid #2196F3;
-        }
-
-        .premium {
-            border-top: 5px solid #9C27B0;
-        }
-
-        .package-card h2 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        .price {
-            font-size: 2em;
-            color: #2c3e50;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .features li {
-            padding: 8px 0;
-            color: #666;
-        }
-
-        .features li::before {
-            content: "✓";
-            color: #4CAF50;
-            margin-right: 8px;
-        }
-
-        .select-button {
-            background-color: #2a5298;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-
-        .select-button:hover {
-            background-color: #1e3c72;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>New Zealand Study Assessment Form</h1>
-        <form>
-            <!-- Personal Information -->
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-            
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            
-            <!-- Academic Information -->
-            <label for="education-level">Highest Level of Education</label>
-            <select id="education-level" name="education-level" required>
-                <option value="">Select your education level</option>
-                <option value="high-school">High School</option>
-                <option value="bachelors">Bachelor's Degree</option>
-                <option value="masters">Master's Degree</option>
-                <option value="phd">PhD</option>
-            </select>
-            
-            <label for="desired-program">Desired Program of Study</label>
-            <input type="text" id="desired-program" name="desired-program" placeholder="E.g., Computer Science, Business Administration" required>
-            
-            <label for="university-preference">Preferred Universities</label>
-            <textarea id="university-preference" name="university-preference" placeholder="List any preferred universities (if any)"></textarea>
-            
-            <!-- Consent -->
-            <div class="consent">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">I agree to the terms and conditions and the privacy policy.</label>
+        <!-- Academic Background -->
+        <div class="section">
+            <h2>Academic Background</h2>
+            <div class="form-group">
+                <label class="required" for="qualification">Highest Qualification</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option value="bachelors">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
+            <div class="form-group">
+                <label class="required" for="fieldOfStudy">Field of Study</label>
+                <input type="text" id="fieldOfStudy" name="fieldOfStudy" required>
+            </div>
+            <div class="form-group">
+                <label class="required" for="university">University</label>
+                <input type="text" id="university" name="university" required>
+            </div>
+            <div class="form-group">
+                <label class="required" for="gpa">GPA/Percentage</label>
+                <input type="text" id="gpa" name="gpa" required>
+            </div>
+            <div class="form-group">
+                <label for="researchExp">Research Experience (if any)</label>
+                <textarea id="researchExp" name="researchExp" rows="3"></textarea>
+            </div>
+        </div>
 
-            <!-- Packages Section -->
+        <!-- Study Abroad Plans -->
+        <div class="section">
+            <h2>Study Abroad Plans</h2>
+            <div class="form-group">
+                <label class="required" for="intendedDegree">Intended Degree</label>
+                <select id="intendedDegree" name="intendedDegree" required>
+                    <option value="">Select Degree</option>
+                    <option value="ms">MS</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="required" for="targetCountries">Target Countries (up to 3)</label>
+                <input type="text" id="targetCountries" name="targetCountries" required>
+            </div>
+            <div class="form-group">
+                <label class="required" for="startDate">Preferred Start Date</label>
+                <input type="month" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label class="required">Funding Plan</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="funding" value="self"> Self-funded
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="funding" value="scholarship"> Seeking Scholarship
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="funding" value="university"> University Funding
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="funding" value="other"> Other
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Required -->
+        <div class="section">
+            <h2>Support Required</h2>
+            <div class="form-group">
+                <label>Select all that apply</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="university"> University Selection
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="application"> Application Process
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="proposal"> Research Proposal Development
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="scholarship"> Scholarship Applications
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="visa"> Visa Guidance
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="support" value="financial"> Financial Planning
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Packages Section -->
+        <div class="section">
+            <h2>Consultation Packages</h2>
             <div class="packages-container">
+                <!-- Basic Package -->
                 <div class="package-card basic">
                     <h2>Basic Package</h2>
-                    <div class="price">$XXX</div>
+                    <div class="price">$299</div>
                     <ul class="features">
                         <li>Initial Consultation (1 hour)</li>
                         <li>University Shortlisting (3 universities)</li>
                         <li>Basic Document Review</li>
                         <li>Email Support</li>
+                        <li>Basic Application Guide</li>
+                        <li>1 SOP Review</li>
+                        <li>Basic Visa Guide</li>
                     </ul>
-                    <button class="select-button" type="button" onclick="selectPackage('Basic')">Select Basic</button>
+                    <button class="select-button" onclick="selectPackage('basic')">Select Basic</button>
                 </div>
 
+                <!-- Standard Package -->
                 <div class="package-card standard">
+                    <span class="popular-badge">Most Popular</span>
                     <h2>Standard Package</h2>
-                    <div class="price">$XXX</div>
+                    <div class="price">$599</div>
                     <ul class="features">
-                        <li>Everything in Basic, plus:</li>
+                        <li>All Basic Package Features</li>
                         <li>Extended Consultation (2 hours)</li>
-                        <li>Scholarship Application Support</li>
-                        <li>Interview Preparation</li>
+                        <li>University Shortlisting (5 universities)</li>
+                        <li>Comprehensive Document Review</li>
+                        <li>Email and Phone Support</li>
+                        <li>Detailed Application Assistance</li>
+                        <li>2 SOP Reviews</li>
+                        <li>Scholarship Application Guide</li>
+                        <li>Comprehensive Visa Guide</li>
                     </ul>
-                    <button class="select-button" type="button" onclick="selectPackage('Standard')">Select Standard</button>
+                    <button class="select-button" onclick="selectPackage('standard')">Select Standard</button>
                 </div>
 
+                <!-- Premium Package -->
                 <div class="package-card premium">
                     <h2>Premium Package</h2>
-                    <div class="price">$XXX</div>
+                    <div class="price">$999</div>
                     <ul class="features">
-                        <li>Unlimited Consultation</li>
-                        <li>Comprehensive Application Management</li>
-                        <li>Post-Admission Support</li>
+                        <li>All Standard Package Features</li>
+                        <li>Unlimited Consultations</li>
+                        <li>University Shortlisting (7+ universities)</li>
+                        <li>Full Application Management</li>
+                        <li>Priority Email and Phone Support</li>
+                        <li>Unlimited SOP Reviews</li>
+                        <li>Interview Preparation</li>
+                        <li>Scholarship Application Assistance</li>
+                        <li>Comprehensive Visa Assistance</li>
+                        <li>Post-Arrival Support</li>
                     </ul>
-                    <button class="select-button" type="button" onclick="selectPackage('Premium')">Select Premium</button>
+                    <button class="select-button" onclick="selectPackage('premium')">Select Premium</button>
                 </div>
             </div>
+        </div>
 
-            <!-- Submit Button -->
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        <!-- Consent -->
+        <div class="section">
+            <h2>Consent</h2>
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="consent" required> I agree that the information provided is accurate and my data will be handled according to applicable privacy regulations
+                </label>
+            </div>
+        </div>
 
-    <script>
-        function selectPackage(packageType) {
-            alert(`You have selected the ${packageType} Package`);
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+<script>
+    function selectPackage(packageType) {
+        localStorage.setItem('selectedPackage', packageType);
+        document.getElementById('package').value = packageType;
+    }
+
+    window.addEventListener('load', function() {
+        const selectedPackage = localStorage.getItem('selectedPackage');
+        if (selectedPackage) {
+            const packageSelect = document.getElementById('package');
+            packageSelect.value = selectedPackage.toLowerCase();
         }
-    </script>
-</body>
-</html>
+    });
+
+    const form = document.getElementById('studyAbroadForm');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQ9H4735iZy9E6vlEzW0z7WBgRhEIh5LDmemFfd8lSrdbdeKbAemeJis1DDOcmV-9n/exec';
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
