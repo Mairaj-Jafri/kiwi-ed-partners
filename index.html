@@ -1,190 +1,400 @@
-        <!-- Academic Background -->
-        <div class="section">
-            <h2>Academic Background</h2>
-            <div class="form-group">
-                <label class="required" for="qualification">Highest Qualification</label>
-                <select id="qualification" name="qualification" required>
-                    <option value="">Select Qualification</option>
-                    <option value="bachelors">Bachelor's</option>
-                    <option value="masters">Master's</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="required" for="fieldOfStudy">Field of Study</label>
-                <input type="text" id="fieldOfStudy" name="fieldOfStudy" required>
-            </div>
-            <div class="form-group">
-                <label class="required" for="university">University</label>
-                <input type="text" id="university" name="university" required>
-            </div>
-            <div class="form-group">
-                <label class="required" for="gpa">GPA/Percentage</label>
-                <input type="text" id="gpa" name="gpa" required>
-            </div>
-            <div class="form-group">
-                <label for="researchExp">Research Experience (if any)</label>
-                <textarea id="researchExp" name="researchExp" rows="3"></textarea>
-            </div>
-        </div>
+I apologize for the confusion earlier. I'll provide the complete merged code with all fields intact, including the funding options, and insert the packages section just before the consent. Here's the updated HTML code:
 
-        <!-- Study Abroad Plans -->
-        <div class="section">
-            <h2>Study Abroad Plans</h2>
-            <div class="form-group">
-                <label class="required" for="intendedDegree">Intended Degree</label>
-                <select id="intendedDegree" name="intendedDegree" required>
-                    <option value="">Select Degree</option>
-                    <option value="ms">MS</option>
-                    <option value="phd">PhD</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="required" for="targetCountries">Target Countries (up to 3)</label>
-                <input type="text" id="targetCountries" name="targetCountries" required>
-            </div>
-            <div class="form-group">
-                <label class="required" for="startDate">Preferred Start Date</label>
-                <input type="month" id="startDate" name="startDate" required>
-            </div>
-            <div class="form-group">
-                <label class="required">Funding Plan</label>
-                <div class="checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="funding" value="self"> Self-funded
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="funding" value="scholarship"> Seeking Scholarship
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="funding" value="university"> University Funding
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="funding" value="other"> Other
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <!-- Support Required -->
-        <div class="section">
-            <h2>Support Required</h2>
-            <div class="form-group">
-                <label>Select all that apply</label>
-                <div class="checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="university"> University Selection
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="application"> Application Process
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="proposal"> Research Proposal Development
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="scholarship"> Scholarship Applications
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="visa"> Visa Guidance
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="support" value="financial"> Financial Planning
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <!-- Packages Section -->
-        <div class="section">
-            <h2>Consultation Packages</h2>
-            <div class="packages-container">
-                <!-- Basic Package -->
-                <div class="package-card basic">
-                    <h2>Basic Package</h2>
-                    <div class="price">$299</div>
-                    <ul class="features">
-                        <li>Initial Consultation (1 hour)</li>
-                        <li>University Shortlisting (3 universities)</li>
-                        <li>Basic Document Review</li>
-                        <li>Email Support</li>
-                        <li>Basic Application Guide</li>
-                        <li>1 SOP Review</li>
-                        <li>Basic Visa Guide</li>
-                    </ul>
-                    <button class="select-button" onclick="selectPackage('basic')">Select Basic</button>
-                </div>
-
-                <!-- Standard Package -->
-                <div class="package-card standard">
-                    <span class="popular-badge">Most Popular</span>
-                    <h2>Standard Package</h2>
-                    <div class="price">$599</div>
-                    <ul class="features">
-                        <li>All Basic Package Features</li>
-                        <li>Extended Consultation (2 hours)</li>
-                        <li>University Shortlisting (5 universities)</li>
-                        <li>Comprehensive Document Review</li>
-                        <li>Email and Phone Support</li>
-                        <li>Detailed Application Assistance</li>
-                        <li>2 SOP Reviews</li>
-                        <li>Scholarship Application Guide</li>
-                        <li>Comprehensive Visa Guide</li>
-                    </ul>
-                    <button class="select-button" onclick="selectPackage('standard')">Select Standard</button>
-                </div>
-
-                <!-- Premium Package -->
-                <div class="package-card premium">
-                    <h2>Premium Package</h2>
-                    <div class="price">$999</div>
-                    <ul class="features">
-                        <li>All Standard Package Features</li>
-                        <li>Unlimited Consultations</li>
-                        <li>University Shortlisting (7+ universities)</li>
-                        <li>Full Application Management</li>
-                        <li>Priority Email and Phone Support</li>
-                        <li>Unlimited SOP Reviews</li>
-                        <li>Interview Preparation</li>
-                        <li>Scholarship Application Assistance</li>
-                        <li>Comprehensive Visa Assistance</li>
-                        <li>Post-Arrival Support</li>
-                    </ul>
-                    <button class="select-button" onclick="selectPackage('premium')">Select Premium</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Consent -->
-        <div class="section">
-            <h2>Consent</h2>
-            <div class="form-group">
-                <label class="checkbox-label">
-                    <input type="checkbox" name="consent" required> I agree that the information provided is accurate and my data will be handled according to applicable privacy regulations
-                </label>
-            </div>
-        </div>
-
-        <button type="submit">Submit Application</button>
-    </form>
-</div>
-
-<script>
-    function selectPackage(packageType) {
-        localStorage.setItem('selectedPackage', packageType);
-        document.getElementById('package').value = packageType;
-    }
-
-    window.addEventListener('load', function() {
-        const selectedPackage = localStorage.getItem('selectedPackage');
-        if (selectedPackage) {
-            const packageSelect = document.getElementById('package');
-            packageSelect.value = selectedPackage.toLowerCase();
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Abroad Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-    });
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        .checkbox-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .banner {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .banner h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .banner p {
+            font-size: 1.2em;
+            margin: 0;
+            opacity: 0.9;
+        }
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+        .basic { border-top: 5px solid #4CAF50; }
+        .standard { border-top: 5px solid #2196F3; }
+        .premium { border-top: 5px solid #9C27B0; }
+        .package-card h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .price {
+            font-size: 2em;
+            color: #2c3e50;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .features li {
+            padding: 8px 0;
+            color: #666;
+        }
+        .features li::before {
+            content: "✓";
+            color: #4CAF50;
+            margin-right: 8px;
+        }
+        .select-button {
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .select-button:hover {
+            background-color: #1e3c72;
+        }
+        .popular-badge {
+            background-color: #FF4081;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 0.9em;
+        }
+        .package-card.standard {
+            position: relative;
+            border: 2px solid #2196F3;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .packages-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package-card {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Study Abroad Registration Form</h1>
+        <form id="studyAbroadForm">
+            <!-- Personal Details -->
+            <div class="section">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label class="required" for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="country">Current Country of Residence</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            </div>
 
-    const form = document.getElementById('studyAbroadForm');
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQ9H4735iZy9E6vlEzW0z7WBgRhEIh5LDmemFfd8lSrdbdeKbAemeJis1DDOcmV-9n/exec';
+            <!-- Academic Background -->
+            <div class="section">
+                <h2>Academic Background</h2>
+                <div class="form-group">
+                    <label class="required" for="qualification">Highest Qualification</label>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">Select Qualification</option>
+                        <option value="bachelors">Bachelor's</option>
+                        <option value="masters">Master's</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="fieldOfStudy">Field of Study</label>
+                    <input type="text" id="fieldOfStudy" name="fieldOfStudy" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="university">University</label>
+                    <input type="text" id="university" name="university" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="gpa">GPA/Percentage</label>
+                    <input type="text" id="gpa" name="gpa" required>
+                </div>
+                <div class="form-group">
+                    <label for="researchExp">Research Experience (if any)</label>
+                    <textarea id="researchExp" name="researchExp" rows="3"></textarea>
+                </div>
+            </div>
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        const formData = new FormData(form);
+            <!-- Study Abroad Plans -->
+            <div class="section">
+                <h2>Study Abroad Plans</h2>
+                <div class="form-group">
+                    <label class="required" for="intendedDegree">Intended Degree</label>
+                    <select id="intendedDegree" name="intendedDegree" required>
+                        <option value="">Select Degree</option>
+                        <option value="ms">MS</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="targetCountries">Target Countries (up to 3)</label>
+                    <input type="text" id="targetCountries" name="targetCountries" required>
+                </div>
+                <div class="form-group">
+                    <label class="required" for="startDate">Preferred Start Date</label>
+                    <input type="month" id="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label class="required">Funding Plan</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="funding" value="self"> Self-funded
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="funding" value="scholarship"> Seeking Scholarship
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="funding" value="university"> University Funding
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="funding" value="other"> Other
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Required -->
+            <div class="section">
+                <h2>Support Required</h2>
+                <div class="form-group">
+                    <label>Select all that apply</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="university"> University Selection
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="application"> Application Process
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="proposal"> Research Proposal Development
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="scholarship"> Scholarship Applications
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="visa"> Visa Guidance
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="support" value="financial"> Financial Planning
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packages Section -->
+            <div class="section">
+                <h2>Consultation Packages</h2>
+                <div class="packages-container">
+                    <!-- Basic Package -->
+                    <div class="package-card basic">
+                        <h2>Basic Package</h2>
+                        <div class="price">$299</div>
+                        <ul class="features">
+                            <li>Initial Consultation (1 hour)</li>
+                            <li>University Shortlisting (3 universities)</li>
+                            <li>Basic Document Review</li>
+                            <li>Email Support</li>
+                            <li>Basic Application Guide</li>
+                            <li>1 SOP Review</li>
+                            <li>Basic Visa Guide</li>
+                        </ul>
+                        <button class="select-button" onclick="selectPackage('basic')">Select Basic</button>
+                    </div>
+
+                    <!-- Standard Package -->
+                    <div class="package-card standard">
+                        <span class="popular-badge">Most Popular</span>
+                        <h2>Standard Package</h2>
+                        <div class="price">$599</div>
+                        <ul class="features">
+                            <li>All Basic Package Features</li>
+                            <li>Extended Consultation (2 hours)</li>
+                            <li>University Shortlisting (5 universities)</li>
+                            <li>Comprehensive Document Review</li>
+                            <li>Email and Phone Support</li>
+                            <li>Detailed Application Assistance</li>
+                            <li>2 SOP Reviews</li>
+                            <li>Scholarship Application Guide</li>
+                            <li>Comprehensive Visa Guide</li>
+                        </ul>
+                        <button class="select-button" onclick="selectPackage('standard')">Select Standard</button>
+                    </div>
+
+                    <!-- Premium Package -->
+                    <div class="package-card premium">
+                        <h2>Premium Package</h2>
+                        <div class="price">$999</div>
+                        <ul class="features">
+                            <li>All Standard Package Features</li>
+                            <li>Unlimited Consultations</li>
+                            <li>University Shortlisting (7+ universities)</li>
+                            <li>Full Application Management</li>
+                            <li>Priority Email and Phone Support</li>
+                            <li>Unlimited SOP Reviews</li>
+                            <li>Interview Preparation</li>
+                            <li>Scholarship Application Assistance</li>
+                            <li>Comprehensive Visa Assistance</li>
+                            <li>Post-Arrival Support</li>
+                        </ul>
+                        <button class="select-button" onclick="selectPackage('premium')">Select Premium</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consent -->
+            <div class="section">
+                <h2>Consent</h2>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent" required> I agree that the information provided is accurate and my data will be handled according to applicable privacy regulations
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <script>
+        function selectPackage(packageType) {
+            localStorage.setItem('selectedPackage', packageType);
+            document.getElementById('package').value = packageType;
+        }
+
+        window.addEventListener('load', function() {
+            const selectedPackage = localStorage.getItem('selectedPackage');
+            if (selectedPackage) {
+                const packageSelect = document.getElementById('package');
+                packageSelect.value = selectedPackage.toLowerCase();
+            }
+        });
+
+        const form = document.getElementById('studyAbroadForm');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzQ9H4735iZy9E6vlEzW0z7WBgRhEIh5LDmemFfd8lSrdbdeKbAemeJis1DDOcmV-9n/exec';
+
+        form.addEventListener
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/30640987/b4c9bdcc-4b89-482e-a1a4-330f8a358268/paste.txt
